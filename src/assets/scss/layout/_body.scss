@@ -1,0 +1,110 @@
+// Size
+.small {
+  max-width: 600px !important;
+}
+.medium {
+  max-width: 800px !important;
+}
+.lage {
+  max-width: 1200px !important;
+}
+.x-lage {
+  max-width: 1600px !important;
+}
+
+.body-container {
+  .contents {
+    width: 100%;
+  }
+
+  &.mypage {
+    padding: 80px 0 200px;
+    background-color: $bgColor-12;
+
+    .wrap {
+      display: flex;
+      width: 100%;
+      max-width: 1600px;
+      margin: auto;
+      gap: 6.3%;
+    }
+
+    .contents {
+      max-width: 1200px;
+      margin: 0;
+    }
+  }
+}
+
+// Heading Tag
+.title1 {
+  color: $color-1;
+  @include fontCustom(36px,bold,normal,-0.9px);
+}
+.title2 {
+  color: $color-1;
+  @include fontCustom(24px,bold,normal,-0.6px);
+}
+
+// Contents
+.contents-wrap {
+  padding-bottom: 200px;
+  background-color: $bgColor-3;
+
+  .contents-section {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.box-wrap {
+  padding-top: 100px;
+
+  .box-layer {
+    padding: 60px;
+    border-radius: 12px;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.08);
+    background-color: $bgColor-12;
+  }
+
+  .box-top {
+    margin-bottom: 40px;
+    text-align: center;
+
+    &.border-bottom {
+      padding-bottom: 32px;
+      border-bottom: 1px solid $bdColor-3;
+    }
+  }
+
+  .box-info-txt {
+    margin-top: 16px;
+    color: $color-1;
+    @include fontCustom(20px,normal,normal,-0.5px);
+
+    & + .box-info-txt {
+      margin-top: 8px;
+      color: $color-4;
+      @include fontCustom(14px,normal,normal,-0.35px);
+    }
+  }
+}
+
+.title-text-box {
+  padding-top: 60px;
+
+  & + .box-wrap {
+    padding-top: 40px;
+  }
+
+  .description-text {
+    margin-top: 16px;
+    color: $color-3;
+    @include fontCustom(16px,normal,24px,-0.4px);
+  }
+}
+
+.btn-wrap {
+  margin-top: 32px;
+  text-align: center;
+}

@@ -1,0 +1,179 @@
+
+
+.card {
+  width: 100%;
+  height: 206px;
+  padding: 32px;
+  color: #fff;
+  background-color: $bgColor-3;
+  border-radius: 12px;
+
+  .text-block {
+    display: block;
+  }
+
+  .card-top {
+    height: 74px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+    .title-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-title {
+      overflow: hidden;
+      max-width: 260px;
+      color: $color-5;
+      @include fontCustom(20px,bold,normal,-0.5px);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .badge {
+      padding: 8px 12px;
+      border-radius: 16px;
+      background-color: rgba(255, 255, 255, 0.12);
+      @include fontCustom(14px,normal,normal,-0.35px);
+    }
+  }
+
+  .card-status-box {
+    margin-top: 5px;
+
+    .card-status {
+      opacity: 0.6;
+      text-decoration: underline;
+      @include fontCustom(14px,normal,normal,-0.35px);
+
+      &.clearly {
+        opacity: 1;
+      }
+    }
+  }
+
+  .card-bottom {
+    height: 45px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    .date-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & + .date-box {
+        margin-top: 13px;
+      }
+
+      .date-text {
+        opacity: 0.6;
+        @include fontCustom(14px,normal,normal,-0.35px);
+      }
+
+      .date-value {
+        @include fontCustom(14px,normal,normal,-0.35px);
+      }
+    }
+  }
+
+  &.subscribe {
+    background-color: $bgColor-8;
+  }
+
+  &.product {
+    background-color: $bgColor-9;
+  }
+
+  &.enterprise {
+    background-color: $bgColor-6;
+  }
+
+  &.termination {
+    background-color: $bgColor-4;
+
+    .card-title {
+      color: $color-4;
+    }
+
+    .card-status {
+      color: $color-4;
+      text-decoration: none;
+    }
+
+    .badge {
+      color: $color-4;
+      background-color: $bgColor-16;
+    }
+
+    .date-box {
+      .date-text {
+        color: $color-4;
+      }
+
+      .date-value {
+        opacity: 0.6;
+        color: $color-4;
+      }
+    }
+  }
+
+  &.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+      text-align: center;
+      color: $color-1;
+      @include fontCustom(20px,normal,1.4,-0.5px);
+    }
+
+    .btn-wrap {
+      max-width: 146px;
+      margin: 24px auto 0;
+    }
+
+    .button {
+      font-weight: 700;
+      padding: 15px 0 14px;
+    }
+
+    &.full-size {
+      height: 400px;
+    }
+  }
+}
+
+.rate-plan-info-text {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+
+  .ico-refer {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+
+  .text {
+    color: $color-3;
+    @include fontCustom(16px,normal,normal,-0.4px);
+  }
+
+  .text-link {
+    color: $color-6;
+    text-decoration: underline;
+  }
+}
+
+.item {
+  &.two-column,
+  &.three-column {
+    .text-block {
+      display: inline;
+    }
+  }
+}

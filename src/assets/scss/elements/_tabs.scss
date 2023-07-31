@@ -1,0 +1,51 @@
+
+.tabmenu-wrap {
+  position: relative;
+  padding: 30px;
+  border: 1px solid;
+  .tabmenu {
+    position: relative;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    list-style: none;
+    .submenu {
+      width:100%;
+      z-index: 999;
+      text-align: center;
+      padding: 15px 10px;
+      letter-spacing: -0.5px;
+      color: $color-4;
+      cursor: pointer;
+      border-bottom: 1px solid $bdColor-3;
+      transition: all 0.3s ease 0;
+      &.focused {
+        border-bottom: 3px solid $bdColor-2;
+        color: $color-7;
+      }
+    }
+    // .tab-line {
+    //   position: absolute;
+    //   height: 3px;
+    //   bottom: 0;
+    //   z-index: 0;
+    //   background-color: $bdColor-2;
+    //   transition: all .5s ease 0s;
+    // }
+    // .tab-line, li:nth-child(1):checked~.tab-line {
+    //   width: calc(100% / 2);
+    //   left: 0;
+    // }
+    // .tab-line, li:nth-child(2):checked~.tab-line {
+    //   width: calc(100% / 2);
+    //   left: calc(100% / 2);;
+    // }
+  }
+  .tab-content {
+    height: auto;
+    padding: 20px;
+  }
+}
